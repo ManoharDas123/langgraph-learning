@@ -34,5 +34,5 @@ app = flow.compile()
 app.get_graph().draw_mermaid_png(output_file_path="flow.png")
 if __name__ =="__main__":
     print("Hello ReAct LangGraph with function calling")
-    res = app.invoke({"messages": [HumanMessage(content="what is the weather in Tokyo? List it and then triple it")]})
+    res = app.invoke({"messages": [HumanMessage(content="What is the temperature in Tokyo in Celsius, and then triple that number?")]})
     print(res["messages"][LAST].content)
